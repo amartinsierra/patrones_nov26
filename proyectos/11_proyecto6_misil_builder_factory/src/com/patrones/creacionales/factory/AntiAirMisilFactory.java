@@ -10,7 +10,7 @@ public class AntiAirMisilFactory extends MisilFactory {
                 .buildOjiva("ojiva plana")
                 .buildPropulsion("Combustible sólido")
                 .buildTipo("Antiaereo")
-                .getMisil();
+                .build();
     }
 }
 

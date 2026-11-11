@@ -10,7 +10,7 @@ public class AntiTankMisilFactory extends MisilFactory {
                .buildPropulsion("Chorro")
  	           .buildAlcance(10)
  	           .buildTipo("Antiatanque")
-               .getMisil();
+               .build();
     }
 }
 

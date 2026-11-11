@@ -28,7 +28,7 @@ public class MisilBuilder {
 		return this;
 	}
 
-	public Misil getMisil() {
+	public Misil build() {
 		return misil;
 	}
 
