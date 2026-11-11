@@ -9,6 +9,7 @@ public class OperadorFactory implements Factory {
         return new Operador.Builder()
                 .setNombre(name)
                 .setEmail(email)
+                .setCategoria(5)
                 .build();
     }
 
