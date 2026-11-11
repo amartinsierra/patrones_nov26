@@ -2,10 +2,10 @@ package com.patrones.creacionales.builder;
 
 public class Misil {
     private String tipo;
-    private String guiado;
-    private String ojiva;
-    private String propulsion;
-    private int alcance;
+    private String guiado="microondas";
+    private String ojiva="estirada";
+    private String propulsion="jet";
+    private int alcance=200;
 
     public void setTipo(String tipo) { this.tipo = tipo; }
     public void setGuiado(String guiado) { this.guiado = guiado; }
