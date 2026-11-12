@@ -13,7 +13,14 @@ public class TutoriaDecorador extends CursoDecorador {
         System.out.println("  + Incluye tutoría personalizada");
     }
 
+    
     @Override
+	public String getNombre() {
+		
+		return super.getNombre()+" con tutoría";
+	}
+
+	@Override
     public double getPrecio() {
         return curso.getPrecio() + 100.0; // coste extra de la tutoría
     }

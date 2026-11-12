@@ -17,4 +17,10 @@ public class CertificadoDecorador extends CursoDecorador {
     public double getPrecio() {
         return curso.getPrecio() + 50.0; // coste extra del certificado
     }
+    
+    @Override
+	public String getNombre() {
+		
+		return super.getNombre()+" con certificado";
+	}
 }
