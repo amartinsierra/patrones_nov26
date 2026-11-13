@@ -1,0 +1,16 @@
+package com.patrones.proyectofinal.service;
+
+import com.patrones.proyectofinal.composite.Componente;
+import com.patrones.proyectofinal.composite.Modulo;
+import com.patrones.proyectofinal.observer.AnalyticSystem;
+
+public class CursosService {
+	public Modulo crearModulo(String nombre, Componente ... components) {
+		Modulo modulo=new Modulo(nombre);
+		modulo.addObserver(new AnalyticSystem());
+		for(Componente component:components) {
+			modulo.add(component);
+		}
+		return modulo;
+	}
+}
