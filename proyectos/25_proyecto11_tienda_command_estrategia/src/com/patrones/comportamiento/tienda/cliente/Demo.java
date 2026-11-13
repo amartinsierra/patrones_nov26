@@ -1,5 +1,7 @@
 package com.patrones.comportamiento.tienda.cliente;
 
+import com.patrones.comportamiento.tienda.informes.GeneradorInforme;
+import com.patrones.comportamiento.tienda.informes.InformeInterno;
 import com.patrones.comportamiento.tienda.model.Pedido;
 import com.patrones.comportamiento.tienda.service.PedidosService;
 import com.patrones.comportamiento.tienda.strategy.DescuentoVIP;
@@ -15,6 +17,8 @@ public class Demo {
 
         calculadora.procesarPedido(pedido);
 
+        GeneradorInforme informe=new InformeInterno();
+        informe.generar(pedido);
         
     }
 	

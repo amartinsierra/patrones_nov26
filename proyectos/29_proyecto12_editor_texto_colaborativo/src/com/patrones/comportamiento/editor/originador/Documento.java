@@ -1,0 +1,44 @@
+package com.patrones.comportamiento.editor.originador;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.patrones.comportamiento.editor.memento.DocumentoMemento;
+import com.patrones.comportamiento.editor.observer.Observador;
+
+public class Documento implements Subject{
+    private String contenido = "";
+    private List<Observador> observadores = new ArrayList<>();
+
+    public void escribir(String texto) {
+        contenido += texto;
+        notificar();
+    }
+
+    public DocumentoMemento guardar() {
+        return new DocumentoMemento(contenido);
+    }
+
+    public void restaurar(DocumentoMemento memento) {
+        contenido = memento.getContenido();  
+        notificar();
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    private void notificar() {
+        for (Observador obs : observadores) {
+            obs.actualizar(contenido);
+        }
+    }
+
+	@Override
+	public void agregarObservador(Observador obs) {
+		observadores.add(obs);
+		
+	}
+
+    
+}
